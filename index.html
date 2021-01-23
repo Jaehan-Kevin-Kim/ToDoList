@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <title>To Do List</title>
+</head>
+
+<body>
+    <img src="images/1.jpg" class="background">
+    <div class="imgFilter"></div>
+    <div class="container">
+        <div class="watch">
+            <h1 class="currentTime" id="currentTime">21:33</h1>
+        </div>
+
+        <form class="greeting" id="greeting__form">
+            <input class="greeting__input" id="greeting__input" type="text" placeholder="Please tell your name">
+            <!-- <button class="submitBtn" id="submitBtn"></button>
+            <h2 class="greetingMessage">Hi, Kevin</h2> -->
+        </form>
+
+        <div class="toDoList">
+            <form action="#" class="form__toDo" id="form__toDo">
+                <input type="text" class="input__toDo" id="input__toDo">
+                <input type="submit" value="enter">
+            </form>
+            <div class="list__container">
+                <h1>master to-do list</h1>
+                <ul class="list__items" id="list__items">
+                    <li class="list__item context">
+                        <p>to do:</p>
+                        <p>✔</p>
+                        <p>delete</p>
+                    </li>
+                    <li class="list__item">
+                        <p>feed the dog</p>
+                        <div class="checkbox">
+                            <input type="checkbox">
+                        </div>
+                        <button class="deleteBtn" id="deleteBtn"><i class="fas fa-trash"></i></button>
+
+                    </li>
+                </ul>
+                <button class="clearAll" id="clearAll">Clear</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- <script src="watch.js"></script>
+    <script src="background.js"></script>
+    <script src="toDo.js"></script> -->
+    <script src="greeting.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,145 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  width: 100vw;
+  height: 100vh;
+  /* background-image: url('images/1.jpg');
+  background-size: cover; */
+  /* background-blend-mode: overlay; */
+  /* background-color: black;
+  background-blend-mode: screen; */
+  color: white;
+  position: relative;
+  /* padding: 10px;
+    margin */
+}
+/* body::after */
+img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -2;
+}
+.imgFilter{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: black;
+  opacity: 0.3;
+  z-index:-1;
+  
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background: black;
+  opacity: 0.5;
+  position: absolute; */
+
+  
+}
+
+/* .background {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  /* background-color: black; */
+  /* opacity: 1; */
+  /* z-index: -1; */
+/* } */
+
+.background::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: black;
+} */
+
+.watch {
+  /* justify-self: center; */
+  font-size: 3rem;
+}
+
+.watch .currentTime {
+  font-size: 5rem;
+}
+
+.list__container {
+  background-color: #c2d6e1;
+  border-radius: 10%;
+  /* width: 80vw;
+  height: 80vh; */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.list__container h1 {
+  margin: 1em 0;
+}
+
+.list__items {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.list__item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 90%;
+  background: #fff;
+  /* height: 20px; */
+}
+
+.list__item * {
+  padding: 0 10px;
+  height: 20px;
+  width: 100%;
+  border: #31769d 1px;
+  border-style: groove;
+  text-align: center;
+}
+
+li.context {
+  background-color: #31769d;
+}
+
+.checkbox input {
+  height: auto;
+}
+
+.deleteBtn {
+  cursor: pointer;
+}
+
+.clearAll {
+  margin-top: 2em;
+  justify-self: flex-end;
+}
