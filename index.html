@@ -15,6 +15,10 @@
     <img src="images/1.jpg" class="background">
     <div class="imgFilter"></div>
     <div class="container">
+        <div class="weather" id="weather">
+            <!-- Calgary, 9C -->
+            <input type="text" class="weather__input" id="weather__input" placeholder="Enter city name">
+        </div>
         <div class="watch">
             <h1 class="currentTime" id="currentTime">21:33</h1>
         </div>
@@ -26,11 +30,27 @@
         </form>
 
         <div class="toDoList">
+            <h5>What is your main focus for today?</h5>
             <form action="#" class="form__toDo" id="form__toDo">
                 <input type="text" class="input__toDo" id="input__toDo">
-                <input type="submit" value="enter">
+                <!-- <input type="submit" value="enter"> -->
             </form>
             <div class="list__container">
+                <ul class="list__items" id="list__items">
+                    <!-- <li class="list__item">
+                        <button class="deleteBtn" id="deleteBtn"><i class="fas fa-trash"></i></button>
+                        <span id="paragraph">Go to bed early</span>
+
+                    </li>
+                    <li class="list__item">
+                        <button class="deleteBtn" id="deleteBtn"><i class="fas fa-trash"></i></button>
+                        <span id="paragraph">English study</span>
+
+                    </li> -->
+                </ul>
+                <button class="clearAll" id="clearAll">Clear</button>
+            </div>
+            <!-- <div class="list__container">
                 <h1>master to-do list</h1>
                 <ul class="list__items" id="list__items">
                     <li class="list__item context">
@@ -48,14 +68,15 @@
                     </li>
                 </ul>
                 <button class="clearAll" id="clearAll">Clear</button>
-            </div>
+            </div> -->
         </div>
     </div>
 
-    <!-- <script src="watch.js"></script>
+    <script src="watch.js"></script>
     <script src="background.js"></script>
-    <script src="toDo.js"></script> -->
     <script src="greeting.js"></script>
+    <script src="toDo.js"></script>
+    <script src="weather.js"></script>
 </body>
 
 </html>

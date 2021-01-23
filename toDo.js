@@ -5,6 +5,7 @@ const lists = document.getElementById('list__items');
 // const list = document.querySelectorAll('.list__item');
 const clearBtn = document.getElementById('clearAll');
 const checkBox = document.querySelector('.checkbox input');
+const LS_KEY = 'toDoList';
 let localStorageData = [];
 let id = 0;
 // console.log(checkBox.value);
@@ -17,23 +18,23 @@ function saveToLocalStorage(data) {
 
 function elementsCreater(data) {
   const li = document.createElement('li');
-  const p = document.createElement('p');
-  const div = document.createElement('div');
-  const input = document.createElement('input');
+  const span = document.createElement('span');
+  // const div = document.createElement('div');
+  // const input = document.createElement('input');
   const btn = document.createElement('button');
-  input.type = 'checkbox';
-  div.appendChild(input);
-  li.classList.add('list__item');
+  // input.type = 'checkbox';
+  // div.appendChild(input);
   btn.classList.add('deleteBtn');
+  li.classList.add('list__item');
   btn.innerHTML = `<i class="fas fa-trash"></i>`;
-  div.classList.add('checkbox');
+  // div.classList.add('checkbox');
   const newId = id++;
   li.id = newId;
-  li.appendChild(p);
-  li.appendChild(div);
+  // li.appendChild(div);
   li.appendChild(btn);
+  li.appendChild(span);
   lists.appendChild(li);
-  p.innerHTML = data;
+  span.innerHTML = data;
 
   btn.addEventListener('click', deleteItem);
   const object = { id: newId, value: data };
@@ -44,6 +45,7 @@ function elementsCreater(data) {
 
 function createList(e) {
   e.preventDefault();
+  console.log(e);
   const inputData = e.target.children[0].value;
   elementsCreater(inputData);
 
@@ -78,9 +80,9 @@ function deleteAll() {
 }
 
 function init() {
-  if (localStorage.getItem('toDoList') !== null) {
+  if (localStorage.getItem(LS_KEY) !== null) {
     // console.log('local storage data is exist');
-    const loadedData = JSON.parse(localStorage.getItem('toDoList'));
+    const loadedData = JSON.parse(localStorage.getItem(LS_KEY));
     console.log(loadedData);
     loadedData.forEach((data) => {
       elementsCreater(data.value);

@@ -1,34 +1,36 @@
-const form = document.getElementById('greeting__form');
-const input = form.querySelector('.greeting__input');
-const LS_KEY = 'UserName';
+'use strict';
+const form_greeting = document.getElementById('greeting__form');
+const input_greeting = form_greeting.querySelector('.greeting__input');
+// const greeting__input = document.getElementById('greeting__input');
+const LS_KEY_USERNAME = 'UserName';
 // alert('greeting');
 
 function formatCreator(userInfo) {
   const message = document.createElement('h2');
-  form.appendChild(message);
+  form_greeting.appendChild(message);
   message.innerText = `Hi, ${userInfo}`;
-  input.remove();
+  input_greeting.remove();
 }
 
 function saveLS(e) {
   e.preventDefault();
-  const user = input.value;
+  const user = input_greeting.value;
 
   formatCreator(user);
 
-  localStorage.setItem(LS_KEY, user);
+  localStorage.setItem(LS_KEY_USERNAME, user);
   // console.log(e);
 }
 
 function loadLS(userInfo) {
-  formatCreator;
+  formatCreator(userInfo);
 }
 
 function init() {
-  if (localStorage.getItem(LS_KEY) !== null) {
-    formatCreator(localStorage.getItem(LS_KEY));
+  if (localStorage.getItem(LS_KEY_USERNAME) !== null) {
+    formatCreator(localStorage.getItem(LS_KEY_USERNAME));
   }
 }
 
-form.addEventListener('submit', saveLS);
+form_greeting.addEventListener('submit', saveLS);
 init();

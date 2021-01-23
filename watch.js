@@ -7,7 +7,7 @@ function printCurrentTime() {
   const minute = currentTime.getMinutes();
   //   const second = currentTime.getSeconds();
 
-  time.innerText = `${hour < 10 ? `0${hour}` : hour} : ${
+  time.innerText = `${hour < 10 ? `0${hour}` : hour}:${
     minute < 10 ? `0${minute}` : minute
   }`;
 }

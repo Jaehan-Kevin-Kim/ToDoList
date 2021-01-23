@@ -48,11 +48,25 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
   /* background: black;
   opacity: 0.5;
   position: absolute; */
 
   
+}
+
+.weather {
+  position: absolute;
+  right: 1.5em;
+  top: 0.5em;
+  font-size: 0.8rem;
+  text-align: right;
+}
+.weather .weather__input {
+  width: 60%;
+  font-size: 0.7rem;
+ 
 }
 
 /* .background {
@@ -67,7 +81,7 @@ img {
   /* z-index: -1; */
 /* } */
 
-.background::after {
+/* .background::after {
   content: '';
   position: absolute;
   width: 100%;
@@ -75,7 +89,7 @@ img {
   top: 0;
   left: 0;
   background-color: black;
-} */
+}  */
 
 .watch {
   /* justify-self: center; */
@@ -86,11 +100,65 @@ img {
   font-size: 5rem;
 }
 
-.list__container {
+.toDoList {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.toDoList .input__toDo{
+  background-color: transparent;
+  border: none;
+  border-bottom: white 1px solid;
+  color: white;
+  text-align: center;
+}
+.toDoList .input__toDo:focus{
+  /* color: white;
+  text-align: center; */
+  border: none;
+}
+
+.list__items{
+  list-style: none;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.list__container{
+  margin-top: 1rem;
+  font-size: 0.7rem;
+  text-align: center;
+
+}
+.list__item{
+  display: flex;
+  flex-direction: row;
+}
+
+.list__item .deleteBtn{
+  width: 10px;
+  background-color: transparent;
+  border: none;
+  color: white;
+  margin-right: 0.2rem;
+  font-size: 0.5rem;
+}
+.list__container .clearAll {
+  /* all: unset; */
+  color: white;
+  background: transparent;
+  border:1px solid white;
+  padding: 0 0.5rem;
+  cursor: pointer;
+  margin-top: 0;
+  /* text-align: center; */
+  /* margin-top: 0; */
+}
+
+/* .list__container {
   background-color: #c2d6e1;
   border-radius: 10%;
-  /* width: 80vw;
-  height: 80vh; */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -107,15 +175,15 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
+} */
+/* 
 .list__item {
   display: flex;
   flex-direction: row;
   align-items: center;
   width: 90%;
   background: #fff;
-  /* height: 20px; */
+   height: 20px; 
 }
 
 .list__item * {
@@ -133,7 +201,7 @@ li.context {
 
 .checkbox input {
   height: auto;
-}
+} */
 
 .deleteBtn {
   cursor: pointer;
@@ -142,4 +210,10 @@ li.context {
 .clearAll {
   margin-top: 2em;
   justify-self: flex-end;
+  transition: all 0.3s ease;
+}
+
+.clearAll:active {
+  background-color: white;
+  color: black;
 }
