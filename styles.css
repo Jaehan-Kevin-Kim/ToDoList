@@ -107,6 +107,11 @@ img {
   align-items: center;
 }
 
+.toDoList h5 {
+  font-weight: 400;
+
+}
+
 .toDoList .input__toDo{
   background-color: transparent;
   border: none;
